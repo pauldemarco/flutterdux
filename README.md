@@ -29,6 +29,8 @@ class _MyWidgetState extends State<MyWidget> with FlutterDuxMixin{
     )
   ];
 
+  /// The widget's `setState` will be called automatically
+  /// when state slice `counter` changes.
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -41,8 +43,6 @@ class _MyWidgetState extends State<MyWidget> with FlutterDuxMixin{
   }
 }
  ```
-
-The widget's `setState` will be called automatically when state slice `counter` changes.
 
 ### Dispatching actions
 
