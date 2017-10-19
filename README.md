@@ -4,7 +4,7 @@ Flutter + Redux.js
 
 ## Getting Started
 
-Check out this article for a description of how it works.
+Check out [this article](https://medium.com/@paulmdemarco/flutterdux-flutter-redux-js-3d1b5a6c33cb) for a description of how it works.
 
 ### Loading website
 
