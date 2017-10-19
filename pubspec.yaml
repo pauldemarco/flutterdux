@@ -1,8 +1,8 @@
 name: flutterdux
 description: Flutter + Redux.js
 version: 0.0.1
-author: Paul DeMarco
-homepage: https://github.com/pauldemarco
+author: Paul DeMarco <paulmdemarco@gmail.com>
+homepage: https://github.com/pauldemarco/flutterdux
 
 dependencies:
   flutter:
