@@ -13,6 +13,7 @@ class Property<T> {
 }
 
 abstract class FlutterDuxMixin extends State {
+  List<Property> _properties;
   List<Property> get properties;
 
   StreamSubscription stateSub;
@@ -20,6 +21,7 @@ abstract class FlutterDuxMixin extends State {
   @override
   void initState() {
     super.initState();
+    _properties = properties;
     FlutterDux.instance.stateChanges.listen((state) {
       _update(state);
     });
@@ -30,6 +32,7 @@ abstract class FlutterDuxMixin extends State {
   void dispose() {
     stateSub?.cancel();
     stateSub = null;
+    _properties = null;
     super.dispose();
   }
 
@@ -39,7 +42,7 @@ abstract class FlutterDuxMixin extends State {
 
   _update(state) {
     var propertiesChanged = false;
-    properties.forEach((p) {
+    _properties.forEach((p) {
       final statePath = p.statePath;
       final value =
           statePath is Function ? statePath(state) : Path.get(state, statePath);
