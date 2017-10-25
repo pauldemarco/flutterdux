@@ -42,7 +42,7 @@ abstract class FlutterDuxMixin extends State {
 
   _update(state) {
     var propertiesChanged = false;
-    _properties.forEach((p) {
+    _properties?.forEach((p) {
       final statePath = p.statePath;
       final value =
           statePath is Function ? statePath(state) : Path.get(state, statePath);
